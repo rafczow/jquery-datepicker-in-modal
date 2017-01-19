@@ -8,10 +8,6 @@ jQuery(document).ready(function() {
                     jQuery('#datepicker-dummy').val(dateText);
                     jQuery('#datepicker-wrapper').dialog('close');
                 },
-                beforeShowDay: function(date){
-                    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                    return [ array.indexOf(string) == -1 ];
-                },
                 dateFormat: 'dd.mm.yy',
                 altField: '#datepicker-date'
             }
@@ -27,7 +23,6 @@ jQuery(document).ready(function() {
         modal: true,
         draggable: false,
         resizable: false,
-        position: { my: 'center top', at: 'center bottom', of: jQuery('body')},
     });
 
     jQuery('#datepicker-dummy').on('click', function() {
